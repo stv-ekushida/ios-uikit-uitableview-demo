@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_uikit_uitableview_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-zD-UM6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" id="YyZ-gZ-ip1" customClass="ItemTableViewCell" customModule="ios_uikit_uitableview_demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YyZ-gZ-ip1" id="FK5-ZQ-LXg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFP-EV-E1X">
+                                                    <rect key="frame" x="8" y="11" width="307" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-xX-uhG">
+                                                    <rect key="frame" x="323" y="-1" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="FHC-Dj-7xG"/>
+                                                        <constraint firstAttribute="height" constant="44" id="HYt-lG-mXG"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Dv7-xX-uhG" secondAttribute="bottom" id="9oX-tW-SxR"/>
+                                                <constraint firstItem="zFP-EV-E1X" firstAttribute="top" secondItem="FK5-ZQ-LXg" secondAttribute="top" constant="11" id="Bnz-Jd-YQ8"/>
+                                                <constraint firstItem="Dv7-xX-uhG" firstAttribute="leading" secondItem="zFP-EV-E1X" secondAttribute="trailing" constant="8" id="Csi-pP-6B5"/>
+                                                <constraint firstItem="Dv7-xX-uhG" firstAttribute="top" secondItem="FK5-ZQ-LXg" secondAttribute="top" constant="-1" id="M9Y-nq-myK"/>
+                                                <constraint firstAttribute="bottom" secondItem="zFP-EV-E1X" secondAttribute="bottom" constant="11" id="QYr-OE-gOH"/>
+                                                <constraint firstItem="zFP-EV-E1X" firstAttribute="leading" secondItem="FK5-ZQ-LXg" secondAttribute="leading" constant="8" id="X8q-zB-ByX"/>
+                                                <constraint firstItem="Dv7-xX-uhG" firstAttribute="leading" secondItem="zFP-EV-E1X" secondAttribute="trailing" constant="8" id="qJw-4V-DUI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dv7-xX-uhG" secondAttribute="trailing" constant="8" id="rSS-0R-HoP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="thumImageView" destination="Dv7-xX-uhG" id="eZV-TJ-Uqp"/>
+                                            <outlet property="titleLabel" destination="zFP-EV-E1X" id="KxL-R5-GaP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c4R-zD-UM6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3DR-EX-pas"/>
+                            <constraint firstAttribute="trailing" secondItem="c4R-zD-UM6" secondAttribute="trailing" id="Bgc-c1-zOd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c4R-zD-UM6" secondAttribute="bottom" id="TFY-UQ-TGU"/>
+                            <constraint firstItem="c4R-zD-UM6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uVB-lV-6MR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="c4R-zD-UM6" id="jYh-h7-xQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
